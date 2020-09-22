@@ -6,16 +6,26 @@ from time import sleep
 
 
 def main(num_minutes):
+    print("Trace 5")
     camera = PiCamera()
+    print("Trace 6")
     camera.start_preview()
+    print("Trace 7")
     for i in range(num_minutes):
         sleep(60)
         camera.capture("snapshots/snapshot%s.jpg" % i)
+        print("Trace 8")
+        print("Saved picture in snapshots/snapshot%s.jpg" % i)
     camera.stop_preview()
+    print("Trace 9")
 
 
 if __name__ == "main":
+    print("Trace 1")
     num_minutes = 10
     if len(sys.argv > 1):
+        print("Trace 2")
         num_minutes = int(sys.argv[1])
+    print("Trace 3")
     main(num_minutes)
+    print("Trace 4")
