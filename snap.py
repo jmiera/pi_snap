@@ -23,7 +23,7 @@ def main(num_minutes):
 if __name__ == "__main__":
     print("Trace 1")
     num_minutes = 10
-    if len(sys.argv > 1):
+    if len(sys.argv) > 1:
         print("Trace 2")
         num_minutes = int(sys.argv[1])
     print("Trace 3")
